@@ -116,8 +116,8 @@ This project demonstrates the integration of document processing, natural langua
 ## Sample Output
 Once you succesfully setup this project, your web application should look like this : 
 
-![image]()
+![image](./sample_output/Screenshot%20(501).png)
 
-![image]()
+![image](./sample_output/Screenshot%20(502).png)
 
-![image]()
+![image](./sample_output/Screenshot%20(503).png)
