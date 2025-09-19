@@ -51,29 +51,29 @@ This project demonstrates the integration of document processing, natural langua
 
 ## 🚀 Setup & Run
 
-1. Clone repo
-
+1. Clone the repository
+   ```bash
    git clone https://github.com/M27113/Financial_Document_Q-A_Assistant-.git
    cd Financial_Document_Q-A_Assistant-
 
 2. Create and activate a virtual environment
-
+   ```bash
    python -m venv venv
    -- Windows
    venv\Scripts\activate
    -- Mac/Linux
    source venv/bin/activate
 3. Install dependencies
-
+   ```bash
    pip install -r requirements.txt
 
 4. Set your OpenAI API key (if applicable)
-
+   ```bash
    export OPENAI_API_KEY="your_api_key_here"  # Mac/Linux
    setx OPENAI_API_KEY "your_api_key_here"     # Windows
    
 5. Run the app:
-   bash :
+   ```bash
    streamlit run app1.py
    
 -- Open browser at http://localhost:8501
