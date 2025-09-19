@@ -1,39 +1,78 @@
 # Financial_Document_Q-A_Assistant
 
-### 📊 Description:
-A web application to process financial documents (PDF, Excel, TXT) and provide an interactive question-answering system. Users can query revenue, expenses, profits, and other financial metrics using natural language.
+### 🎯 Project Overview
 
-### Features
+The Financial Document Q&A Assistant is a web application that allows users to upload financial documents (PDF, Excel, and text files) and interactively query them using natural language. The application extracts key financial information such as revenue, expenses, profits, and other metrics, providing accurate answers in a conversational interface.
+This project demonstrates the integration of document processing, natural language question-answering, and a user-friendly web interface.
 
--- Upload PDF, Excel, or TXT financial statements
 
--- Extract and analyze text and numerical data
+### 📂 Features
+-- Document Processing
 
--- Supports Income Statements, Balance Sheets, Cash Flow statements
+-- Accepts PDF, Excel, and text file uploads.
 
--- Conversational Q&A interface using local LLM (Ollama)
+-- Extracts both textual and numerical financial data.
 
--- Retrieval-Augmented Generation (RAG) for document-based answers
+-- Supports common financial documents like: Income Statements, Balance Sheets, Cash Flow Statements
 
--- Clean, readable web interface
+-- Handles different layouts and formats.
+
+### Question-Answering System
+
+-- Users can ask natural language questions about financial metrics.
+
+-- Provides accurate and contextual responses from uploaded documents.
+
+-- Supports conversational follow-up questions.
+
+### Web Application
+
+-- Built using Streamlit for an intuitive web interface.
+
+-- Interactive chat interface for querying financial data.
+
+-- Displays extracted financial information in a readable format.
+
+-- Shows processing status and provides clear feedback.
+
+### ⚙️ Technical Implementation
+
+-- Backend: Python with document processing libraries (PyPDFLoader, pandas, openpyxl)
+
+-- NLP: OpenAI Chat API (used instead of Ollama for local Small Language Models)
+
+-- Frontend: Streamlit web interface
+
+-- Local Deployment: Runs entirely on local machine, no cloud hosting required
+
+-- Error Handling: Graceful messages for unsupported file types or missing data
+
+**Note** : This project uses OpenAI API instead of Ollama SLM due to accessibility and ease of development.
 
 ## 🚀 Setup & Run
 
 1. Clone repo
-   bash:
-   git clone https://github.com/<your-username>/financial-qa-assistant.git
-   cd financial-qa-assistant
 
-2. Install dependencies
-   bash :
+   git clone https://github.com/M27113/Financial_Document_Q-A_Assistant-.git
+   cd Financial_Document_Q-A_Assistant-
+
+2. Create and activate a virtual environment
+
+   python -m venv venv
+   -- Windows
+   venv\Scripts\activate
+   -- Mac/Linux
+   source venv/bin/activate
+3. Install dependencies
+
    pip install -r requirements.txt
+
+4. Set your OpenAI API key (if applicable)
+
+   export OPENAI_API_KEY="your_api_key_here"  # Mac/Linux
+   setx OPENAI_API_KEY "your_api_key_here"     # Windows
    
-3. Install Ollama and pull models
-   bash :
-   # Windows example
-   ollama pull llama2
-   
-4. Run the app:
+5. Run the app:
    bash :
    streamlit run app1.py
    
@@ -41,26 +80,13 @@ A web application to process financial documents (PDF, Excel, TXT) and provide a
 -- Upload financial documents
 -- Ask questions interactively
 
-## Setup Instructions (Windows)
+### 📂 Supported File Types
 
-### Clone the repository:
-git clone <your-repo-url>
-cd FinancialQA
+-- PDF (.pdf)
 
-### Run the setup script (creates venv, installs dependencies, pulls Ollama model, launches app):
+-- Excel (.xlsx, .xls)
 
-.\setup_and_run.ps1
-
--- Make sure you have Python 3.11+ installed.
-
-### Alternative manual setup (if not using the script):
-
-python -m venv venv
-.\venv\Scripts\Activate
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-ollama pull llama2-mini
-streamlit run app1.py
+-- Text files (.txt)
 
 ### Usage
 
@@ -76,33 +102,22 @@ streamlit run app1.py
 
 -- If RAG is enabled, answers will use the uploaded documents as context
 
-### Dependencies
+## 📖 Future Improvements
 
--- Python 3.11+
+-- Add support for more file formats (CSV, Google Sheets).
 
--- Streamlit
+-- Improve document layout handling for complex tables.
 
--- Pandas
+-- Implement advanced conversational memory for longer Q&A sessions.
 
--- Openpyxl
+-- Add automated tests for document parsing and question-answering accuracy.
 
--- Ollama
 
--- LangChain
+## Sample Output
+Once you succesfully setup this project, your web application should look like this : 
 
--- LangChain Community
+![image]()
 
--- python-dotenv
+![image]()
 
-All dependencies are listed in requirements.txt.
-
-### Sample Documents
-
--- sample_docs/IncomeStatement.xlsx
-
--- sample_docs/BalanceSheet.pdf
-
--- sample_docs/CashFlow.txt
-
-These files allow you to test PDF, Excel, and TXT support.
-
+![image]()
